@@ -1,12 +1,12 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import Trainings from "./pages/Trainings";
-import Services from "./pages/Services";
-import About from "./pages/About";
+import Services from "./Components/Services.jsx";
+import About from "./Pages/About.jsx";
 import Contact from "./pages/Contact";
 
 export default function App() {
