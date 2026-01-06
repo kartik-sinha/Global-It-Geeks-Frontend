@@ -1,0 +1,28 @@
+.footer {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 24px 0;
+    height: 110px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copy {
+    padding-top: 24px;
+    font-size: 17px;
+}
+
+.footer-tagline {
+    padding-top: 24px;
+    font-size: 17px;
+    opacity: 0.7;
+}
