@@ -1,28 +1,48 @@
+import "../Styles/Hero.css";
+
 export default function Hero() {
     return (
-        <section className="pt-32 bg-slate-100">
-            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 px-6">
-                <div>
-                    <h1 className="text-4xl font-bold text-primary leading-tight">
+        <section className="hero-section">
+            <div className="hero-layout">
+
+                {/* LEFT SIDE */}
+                <div className="hero-text">
+                    <h1 className="hero-title">
                         Industry-Ready IT Training by Professionals
                     </h1>
-                    <p className="mt-4 text-gray-600">
-                        Learn real-world skills. Build production-grade projects. Get job-ready.
+
+                    <p className="hero-description">
+                        Learn real-world software engineering skills through hands-on projects,
+                        modern tools, and industry-driven curriculum designed for today’s tech
+                        landscape.
                     </p>
-                    <div className="mt-6 space-x-4">
-                        <button className="bg-accent text-white px-6 py-3 rounded">
-                            View Trainings
-                        </button>
-                        <button className="border px-6 py-3 rounded">
-                            Talk to Mentor
-                        </button>
-                    </div>
                 </div>
 
-                <div className="bg-gray-300 h-72 rounded-lg flex items-center justify-center">
-                    {/* Video / Image Placeholder */}
-                    <span className="text-gray-700">Training Video Placeholder</span>
+                {/* RIGHT SIDE */}
+                <div className="hero-services">
+                    <p>
+                        Master core programming concepts including data structures, algorithms,
+                        object-oriented design, and problem-solving techniques that form the
+                        backbone of every software role.
+                    </p>
+
+                    <p>
+                        Understand the principles behind AI systems, machine learning models,
+                        and data-driven decision making, with practical exposure to real-world
+                        use cases.
+                    </p>
+
+                    <p>
+                        Learn how modern systems are automated using CI/CD pipelines, scripting,
+                        and infrastructure automation to build scalable and reliable applications.
+                    </p>
+
+                    <p>
+                        Gain hands-on experience with cloud platforms, deployment strategies,
+                        and distributed systems used in production-grade software environments.
+                    </p>
                 </div>
+
             </div>
         </section>
     );
