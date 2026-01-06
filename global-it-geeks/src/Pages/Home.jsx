@@ -8,6 +8,7 @@ import Testimonials from "../components/Testimonials";
 
 import PaymentCTA from "../components/PaymentCTA";
 import Footer from "../components/Footer";
+import "../Styles/Home.css";
 
 export default function Home() {
     return (
@@ -26,7 +27,7 @@ export default function Home() {
                     </p>
                 </div>
             </div>
-            {/*<Hero />*/}
+            <Hero />
             {/*<Companies />*/}
             {/*<About />*/}
             {/*<Trainings />*/}

@@ -1,0 +1,16 @@
+/* ===== Branding ===== */
+.brand-title {
+    font-family: "Playfair Display", serif;
+    font-size: 64px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.brand-tagline {
+    margin-top: 12px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
