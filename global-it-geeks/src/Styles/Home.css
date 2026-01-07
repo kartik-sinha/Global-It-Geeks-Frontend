@@ -1,11 +1,21 @@
-/* ===== Branding ===== */
+.hero {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #9ca3af;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+}
+
 .brand-title {
     font-family: "Playfair Display", serif;
     font-size: 64px;
     font-weight: 600;
     letter-spacing: 0.04em;
-    padding-top: 300px;
-    padding-left: 500px;
 }
 
 .brand-tagline {
@@ -15,13 +25,4 @@
     letter-spacing: 0.25em;
     text-transform: uppercase;
     opacity: 0.8;
-    padding-left: 630px;
 }
-
-.hero {
-    min-height: 100vh;
-    width: 100%;
-    position: relative;
-    background-color: #9ca3af; /* gray-500 equivalent */
-}
-

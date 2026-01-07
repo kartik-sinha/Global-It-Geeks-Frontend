@@ -5,12 +5,11 @@ export default function Navbar() {
     return (
         <nav className="navbar">
             <ul className="navbar-list">
-                <li className="navbar-item">Home</li>
-                <li className="navbar-item">Courses</li>
-                <li className="navbar-item">Services</li>
-                <li className="navbar-item">Pricing</li>
-                <li className="navbar-item">About Us</li>
-                <li className="navbar-item">Contact Us</li>
+                <li className="navbar-item"><Link to="/">Home</Link></li>
+                <li className="navbar-item"><Link to="/trainings">Courses</Link></li>
+                <li className="navbar-item"><Link to="/services">Services</Link></li>
+                <li className="navbar-item"><Link to="/paymentcta">Pricing</Link></li>
+                <li className="navbar-item"><Link to="/about">About Us</Link></li>
             </ul>
         </nav>
     );
