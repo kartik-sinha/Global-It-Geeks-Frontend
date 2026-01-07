@@ -1,0 +1,55 @@
+.about-section {
+    width: 100%;
+    background-color: #f1f5f9; /* light gray, consistent with testimonials */
+    padding: 80px 24px;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+/* Left side image placeholder */
+.about-image-placeholder {
+    width: 100%;
+    height: 320px;
+    background-color: #d1d5db; /* neutral gray */
+    border-radius: 8px;
+}
+
+/* Right side content */
+.about-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.about-description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4b5563;
+    margin-bottom: 24px;
+}
+
+/* Feature list */
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-list li {
+    font-size: 14px;
+    color: #111827;
+    margin-bottom: 10px;
+}
