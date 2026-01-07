@@ -1,21 +1,23 @@
 import { trainings } from "../data/trainings";
+import "../Styles/Trainings.css";
 
 export default function Trainings() {
     return (
-        <section className="py-20 max-w-7xl mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12">
+        <section className="trainings-section">
+            <h2 className="trainings-title">
                 Trainings We Offer
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="trainings-grid">
                 {trainings.map((t) => (
-                    <div key={t.title} className="border rounded-lg p-6 hover:shadow">
-                        <h3 className="text-xl font-semibold">{t.title}</h3>
-                        <p className="mt-2 text-gray-600">{t.stack}</p>
-                        <p className="mt-2 text-sm">Duration: {t.duration}</p>
-                        <button className="mt-4 text-accent font-semibold">
-                            View Curriculum →
-                        </button>
+                    <div key={t.title} className="training-card">
+                        <img
+                            src={t.imageURL}
+                            alt={t.title}
+                            className="training-image"
+                        />
+                        <h3 className="training-title">{t.title}</h3>
+                        <p className="training-stack">{t.stack}</p>
                     </div>
                 ))}
             </div>
