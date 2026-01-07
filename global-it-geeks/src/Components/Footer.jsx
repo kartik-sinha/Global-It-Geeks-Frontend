@@ -1,9 +1,11 @@
+import "../Styles/Footer.css";
+
 export default function Footer() {
     return (
-        <footer className="bg-primary text-white py-10">
-            <div className="max-w-7xl mx-auto text-center">
-                <p>© 2026 Global IT Geeks</p>
-                <p className="text-sm opacity-70">Industry-focused IT training</p>
+        <footer className="footer">
+            <div className="footer-container">
+                <p className="footer-copy">© 2026 Global IT Geeks</p>
+                <p className="footer-tagline">Powered by Global IT Geeks Limited</p>
             </div>
         </footer>
     );

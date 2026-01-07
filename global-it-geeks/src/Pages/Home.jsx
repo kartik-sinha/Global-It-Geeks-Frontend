@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Companies from "../components/Companies";
-import About from "./About.jsx";
+import About from "../components/About";
 import Trainings from "../components/Trainings";
 import Services from "../components/Services";
 import Testimonials from "../components/Testimonials";
@@ -32,7 +32,7 @@ export default function Home() {
             {/*<Trainings />*/}
             <Testimonials />
             {/*<PaymentCTA />*/}
-            {/*<Footer />*/}
+            <Footer />
         </>
     );
 }
