@@ -1,4 +1,5 @@
 import { trainings } from "../data/trainings";
+import { motion } from "framer-motion";
 import "../Styles/Trainings.css";
 
 export default function Trainings() {
@@ -9,8 +10,15 @@ export default function Trainings() {
             </h2>
 
             <div className="trainings-grid">
-                {trainings.map((t) => (
-                    <div key={t.title} className="training-card">
+                {trainings.map((t, index) => (
+                    <motion.div
+                        key={t.title}
+                        className="training-card"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                    >
                         <img
                             src={t.imageURL}
                             alt={t.title}
@@ -18,7 +26,7 @@ export default function Trainings() {
                         />
                         <h3 className="training-title">{t.title}</h3>
                         <p className="training-stack">{t.stack}</p>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </section>
