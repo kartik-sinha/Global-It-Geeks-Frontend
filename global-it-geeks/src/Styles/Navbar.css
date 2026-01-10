@@ -1,43 +1,73 @@
+/* Base navbar (top of page) */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
-    height: 64px;
+    height: 72px;
 
-    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding-right: 32px;
+
+    /* IMPORTANT PART */
+    background: linear-gradient(
+            to bottom,
+            rgba(15, 23, 42, 0.95),
+            rgba(15, 23, 42, 0.7)
+    );
+
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    transition:
+            background 0.3s ease,
+            height 0.3s ease,
+            box-shadow 0.3s ease;
+
     z-index: 1000;
-}
-.navbar-item a {
-    color: #fff;
-    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
+
+/* After scroll */
+.navbar-scrolled {
+    background-color: #0f172a; /* solid dark slate */
+    height: 60px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Nav list */
 .navbar-list {
     display: flex;
-    justify-content: flex-end;
-    align-items: stretch;   /* KEY */
-    height: 100%;
+    align-items: stretch;
     list-style: none;
     margin: 0;
-    padding-left: 32px;
-
+    padding: 0;
 }
 
-/* li fills ul height and centers text */
+/* Items */
 .navbar-item {
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
     height: 100%;
-    display: flex;          /* KEY */
-    align-items: center;    /* vertical centering */
-    padding: 0 20px;
-
-    color: #fff;
-    cursor: pointer;
     font-size: 14px;
     letter-spacing: 0.05em;
 }
 
-.navbar-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+/* Links */
+.navbar-item a {
+    color: #f8fafc; /* near-white */
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.navbar-item a:hover {
+    opacity: 0.75;
 }

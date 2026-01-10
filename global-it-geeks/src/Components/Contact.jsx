@@ -90,7 +90,7 @@ export default function Contact() {
                         />
                     </div>
 
-                    <button type="submit" className="contact-submit">
+                    <button type="submit" className="btn btn-primary">
                         Send Message
                     </button>
 
