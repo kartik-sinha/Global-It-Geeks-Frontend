@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import "../Styles/Services.css";
 
 const services = [
     {
@@ -23,21 +24,19 @@ const services = [
 
 export default function Services() {
     return (
-        <section className="py-20 bg-white">
-            <div className="max-w-7xl mx-auto px-6">
+        <section className="services-section">
+            <div className="services-container">
                 {/* Heading */}
-                <div className="text-center mb-14">
-                    <h2 className="text-3xl font-bold text-primary">
-                        Services We Provide
-                    </h2>
-                    <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+                <div className="services-header">
+                    <h2 className="services-title">Services We Provide</h2>
+                    <p className="services-subtitle">
                         Beyond training, we partner with companies and institutions to
                         deliver impactful learning and technical solutions.
                     </p>
                 </div>
 
                 {/* Service Cards */}
-                <div className="grid md:grid-cols-3 gap-10">
+                <div className="services-grid">
                     {services.map((service, index) => (
                         <motion.div
                             key={service.title}
@@ -45,13 +44,13 @@ export default function Services() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="border rounded-xl p-8 hover:shadow-lg transition"
+                            className="service-card"
                         >
-                            <div className="text-4xl mb-4">{service.icon}</div>
-                            <h3 className="text-xl font-semibold text-primary">
+                            <div className="service-icon">{service.icon}</div>
+                            <h3 className="service-card-title">
                                 {service.title}
                             </h3>
-                            <p className="mt-3 text-gray-600">
+                            <p className="service-card-description">
                                 {service.description}
                             </p>
                         </motion.div>
