@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import Trainings from "./Pages/Courses";
 import ServicesPage from "./Pages/Services";
 import About from "./Pages/About";
+import Pricing from "./Pages/Pricing";
 
 export default function AnimatedRoutes() {
     const location = useLocation();
@@ -35,6 +36,14 @@ export default function AnimatedRoutes() {
                     element={
                         <PageWrapper>
                             <ServicesPage />
+                        </PageWrapper>
+                    }
+                />
+                <Route
+                    path="/paymentcta"
+                    element={
+                        <PageWrapper>
+                            <Pricing />
                         </PageWrapper>
                     }
                 />

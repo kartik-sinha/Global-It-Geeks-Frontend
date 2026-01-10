@@ -6,11 +6,14 @@ export default function Contact() {
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
-    const [status, setStatus] = useState("");
+
+    const [status, setStatus] = useState("idle"); // idle | loading | success | error
+    const [error, setError] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setStatus("Sending...");
+        setStatus("loading");
+        setError("");
 
         try {
             const response = await fetch("http://localhost:8080/api/contact", {
@@ -27,16 +30,17 @@ export default function Contact() {
             });
 
             if (!response.ok) {
-                throw new Error("Failed to send message");
+                throw new Error("Backend error");
             }
 
-            setStatus("Message sent successfully!");
+            setStatus("success");
             setName("");
             setEmail("");
             setSubject("");
             setMessage("");
-        } catch (error) {
-            setStatus("Something went wrong. Please try again.");
+        } catch (err) {
+            setStatus("error");
+            setError("Unable to send message. Please try again later.");
         }
     };
 
@@ -90,11 +94,32 @@ export default function Contact() {
                         />
                     </div>
 
-                    <button type="submit" className="btn btn-primary">
-                        Send Message
+                    <button
+                        type="submit"
+                        className={`btn btn-primary ${
+                            status === "loading" ? "btn-loading" : ""
+                        } ${
+                            status === "success" ? "btn-success" : ""
+                        } ${
+                            status === "error" ? "btn-error" : ""
+                        }`}
+                        disabled={status === "loading"}
+                    >
+                        {status === "loading" && <span className="spinner" />}
+                        {status === "idle" && "Send Message"}
+                        {status === "success" && "Message Sent ✓"}
+                        {status === "error" && "Try Again"}
                     </button>
 
-                    {status && <p className="contact-status">{status}</p>}
+                    {status === "error" && (
+                        <p className="contact-status error-text">{error}</p>
+                    )}
+
+                    {status === "success" && (
+                        <p className="contact-status success-text">
+                            Thank you! We’ll get back to you soon.
+                        </p>
+                    )}
                 </form>
             </div>
         </section>
